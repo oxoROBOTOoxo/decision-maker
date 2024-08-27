@@ -15,10 +15,28 @@ main {
   box-sizing: border-box;
 }
 
-.enter-options-container,
-.make-selection-container {
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 600px;
-  margin: 10px;
-  box-sizing: border-box;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Adjust the max width to your preference */
+  margin: 0 auto;
+}
+
+.enter-options-container, .make-selection-container {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: inherit; /* Inherit the background color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

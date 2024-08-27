@@ -21,14 +21,17 @@ function App() {
 
   return (
     <div className="app-container">
-      <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} /> {/* Pass the toggleTheme and isDarkMode to Header */}
-      <div className="app-content">
-        <EnterOptions options={options} setOptions={setOptions} isDarkMode={isDarkMode} />
-        <MakeSelection options={options} setHistory={setHistory} /> {/* Pass setHistory as a prop */}
-        <SelectionHistory history={history} /> {/* Pass history to SelectionHistory */}
+      <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+      <div className="content-wrapper">
+        <div className="options-container">
+          <EnterOptions options={options} setOptions={setOptions} isDarkMode={isDarkMode} />
+          <MakeSelection options={options} setHistory={setHistory} />
+        </div>
+        <SelectionHistory history={history} />
       </div>
     </div>
   );
+  
 }
 
 export default App;

@@ -1,44 +1,76 @@
-/* EnterOptions.css */
+/* Light Mode Styles */
 .enter-options-container {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .enter-options-container h2 {
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .enter-options-container label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-  
-  .enter-options-container input {
-    width: calc(100% - 130px);
-    padding: 10px;
-    margin-right: 10px;
-    margin-bottom: 12px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  .enter-options-container button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .enter-options-container button:hover {
-    background-color: #0056b3;
-  }
-  
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1000px; /* Adjust this value as needed */
+  box-sizing: border-box;
+  margin: 0 auto; /* Centers the section horizontally */
+}
+
+
+.enter-options-container h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.enter-options-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.enter-options-container input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #000;
+}
+
+.enter-options-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.enter-options-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode Styles */
+.enter-options-container.dark-mode {
+  background-color: #333;
+}
+
+.enter-options-container.dark-mode h2 {
+  color: #fff;
+}
+
+.enter-options-container.dark-mode label {
+  color: #ccc;
+}
+
+.enter-options-container.dark-mode input {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #777;
+}
+
+.enter-options-container.dark-mode button {
+  background-color: #444;
+  color: #fff;
+}
+
+.enter-options-container.dark-mode button:hover {
+  background-color: #222;
+}
