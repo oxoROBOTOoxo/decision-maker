@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './MakeSelection.css';
 
-const MakeSelection = ({ options, setHistory }) => {
+const MakeSelection = ({ options = [], setHistory }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [numSelections, setNumSelections] = useState(1);
 

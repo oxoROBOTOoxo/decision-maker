@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import OptionItem from './OptionItem';
 import { useNavigate } from 'react-router-dom';
 
-const EnterOptions = ({ options, setOptions, isDarkMode }) => {
+const EnterOptions = ({ options = [], setOptions, isDarkMode }) => {
   const [numOptions, setNumOptions] = useState(1);
   const navigate = useNavigate();
 
