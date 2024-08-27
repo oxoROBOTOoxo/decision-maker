@@ -1,15 +1,15 @@
 /* Light Mode Styles */
 .enter-options-container {
-  background-color: #f8f9fa;
+  background-color: #444;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 1000px; /* Adjust this value as needed */
+  width: 100%; /* Adjust this to a smaller width if needed */
   box-sizing: border-box;
-  margin: 0 auto; /* Centers the section horizontally */
+  margin-left: 0px; /* Reduce or remove margin-left */
+  margin-right: auto; /* Ensure it's aligned to the left */
+  max-width: 600px; /* You can also change this if needed */
 }
-
 
 .enter-options-container h2 {
   color: #333;
@@ -50,6 +50,7 @@
 /* Dark Mode Styles */
 .enter-options-container.dark-mode {
   background-color: #333;
+  color: #fff;
 }
 
 .enter-options-container.dark-mode h2 {
