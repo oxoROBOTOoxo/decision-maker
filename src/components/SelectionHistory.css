@@ -1,0 +1,50 @@
+/* SelectionHistory.css */
+
+.history-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .history-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .history-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #e9ecef;
+  }
+  
+  .history-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .timestamp {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .selections {
+    color: #555;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode .history-container {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body.dark-mode .history-item {
+    background-color: #444;
+  }
+  
+  body.dark-mode .selections {
+    color: #bbb;
+  }
+  

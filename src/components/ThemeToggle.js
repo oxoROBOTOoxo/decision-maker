@@ -2,17 +2,23 @@ import React, { useState } from 'react';
 import './ThemeToggle.css';
 
 const ThemeToggle = () => {
-  const [isLightMode, setIsLightMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleTheme = () => {
-    setIsLightMode(!isLightMode);
-    document.body.classList.toggle('light-mode', isLightMode);
+    setIsDarkMode(!isDarkMode);
+    if (isDarkMode) {
+      document.body.classList.remove('dark-mode');
+    } else {
+      document.body.classList.add('dark-mode');
+    }
   };
 
   return (
-    <button onClick={toggleTheme} className="theme-toggle">
-      {isLightMode ? 'Dark Mode' : 'Light Mode'}
-    </button>
+    <div className="theme-toggle-container">
+      <button onClick={toggleTheme}>
+        {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+      </button>
+    </div>
   );
 };
 
