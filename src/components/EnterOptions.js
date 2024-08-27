@@ -3,7 +3,7 @@ import './EnterOptions.css';
 
 const EnterOptions = () => {
   const [numOptions, setNumOptions] = useState(1);
-  const [options, setOptions] = useState([]);
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -1,0 +1,25 @@
+/* ThemeToggle.css */
+.theme-toggle-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .theme-toggle-container button {
+    background-color: #ffc107;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .theme-toggle-container button:hover {
+    background-color: #e0a800;
+  }
+  
