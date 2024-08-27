@@ -1,0 +1,20 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  main {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #555;
+    border-radius: 8px;
+  }
+  
+  main.light-mode {
+    background-color: #f9f9f9;
+  }
+  

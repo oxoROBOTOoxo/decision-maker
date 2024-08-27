@@ -1,0 +1,19 @@
+.app-header {
+    width: 100%;
+    background-color: #444;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .app-header nav a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .app-header nav a:hover {
+    text-decoration: underline;
+  }
+  
