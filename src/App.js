@@ -21,15 +21,12 @@ function App() {
 
   return (
     <div className="app-container">
-      <Header />
+      <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} /> {/* Pass the toggleTheme and isDarkMode to Header */}
       <div className="app-content">
         <EnterOptions options={options} setOptions={setOptions} isDarkMode={isDarkMode} />
         <MakeSelection options={options} setHistory={setHistory} /> {/* Pass setHistory as a prop */}
         <SelectionHistory history={history} /> {/* Pass history to SelectionHistory */}
       </div>
-      <button className="theme-toggle" onClick={toggleTheme}>
-        {isDarkMode ? 'Light Mode' : 'Dark Mode'}
-      </button>
     </div>
   );
 }

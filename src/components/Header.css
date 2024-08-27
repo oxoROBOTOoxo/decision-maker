@@ -1,19 +1,39 @@
 .app-header {
-    width: 100%;
-    background-color: #444;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .app-header nav a {
-    margin: 0 10px;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .app-header nav a:hover {
-    text-decoration: underline;
-  }
-  
+  width: 100%;
+  background-color: #444;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Space between the nav and the button */
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.app-header nav {
+  display: flex;
+}
+
+.app-header nav a {
+  margin: 0 15px; /* Add space between the links */
+  color: #fff; /* Ensure the text color is white */
+  text-decoration: none; /* Remove underline */
+}
+
+.app-header nav a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.theme-toggle-container {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+}
+
+.theme-toggle {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  position: relative;
+  right: 0;
+  z-index: 1000;
+}
