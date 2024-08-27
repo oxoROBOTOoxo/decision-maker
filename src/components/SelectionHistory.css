@@ -4,13 +4,13 @@
     padding: 20px;
     max-width: 600px;
     margin: 0 auto;
-    background-color: #f8f9fa;
+    background-color: #c7c7c7;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.007);
   }
   
   .history-container h2 {
-    color: #333;
+    color: #a8a8a8;
     margin-bottom: 20px;
   }
   
@@ -18,7 +18,7 @@
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 4px;
-    background-color: #e9ecef;
+    background-color: #868686;
   }
   
   .history-item:last-child {
@@ -31,7 +31,7 @@
   }
   
   .selections {
-    color: #555;
+    color: #4e4e4e;
   }
   
   /* Dark Mode Styles */
@@ -41,7 +41,7 @@
   }
   
   body.dark-mode .history-item {
-    background-color: #444;
+    background-color: #5e5e5e;
   }
   
   body.dark-mode .selections {
