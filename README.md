@@ -53,7 +53,6 @@ To run this project locally, follow these steps:
 
 ## Technologies Used
 
-- React
 - CSS
 - JavaScript
 - HTML
