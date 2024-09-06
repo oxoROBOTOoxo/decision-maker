@@ -1,0 +1,106 @@
+.decision-methods {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .method-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .method-buttons button {
+    padding: 10px 15px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .method-buttons button:hover {
+    background-color: #d0d0d0;
+  }
+  
+  .method-buttons button.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .input-section {
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .input-group label {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .input-group input {
+    flex: 2;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .make-decision-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .make-decision-btn:hover {
+    background-color: #218838;
+  }
+  
+  .result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+  }
+  
+  /* Dark mode styles */
+  .dark-mode .decision-methods {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .dark-mode .method-buttons button {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  .dark-mode .method-buttons button:hover {
+    background-color: #666;
+  }
+  
+  .dark-mode .method-buttons button.active {
+    background-color: #007bff;
+  }
+  
+  .dark-mode .input-group input {
+    background-color: #444;
+    color: #fff;
+    border-color: #666;
+  }
+  
+  .dark-mode .result {
+    background-color: #444;
+  }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import EnterOptions from './components/EnterOptions';
-import MakeSelection from './components/MakeSelection';
+import DecisionMethods from './components/DecisionMethods';
 import SelectionHistory from './components/SelectionHistory';
 import './App.css';
 
@@ -10,9 +10,14 @@ function App() {
   const [history, setHistory] = useState([]);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle('dark-mode');
+  };
+
   return (
-    <div className="app-container">
-      <Header />
+    <div className={`app-container ${isDarkMode ? 'dark-mode' : ''}`}>
+      <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       <div className="app-content">
         <div className="left-side">
           <EnterOptions 
@@ -23,7 +28,7 @@ function App() {
           <SelectionHistory history={history} />
         </div>
         <div className="right-side">
-          <MakeSelection options={options} setHistory={setHistory} />
+          <DecisionMethods options={options} setHistory={setHistory} />
         </div>
       </div>
     </div>

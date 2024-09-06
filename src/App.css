@@ -26,6 +26,20 @@
   margin-bottom: 20px;
 }
 
+/* Dark mode styles */
+.app-container.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.app-container.dark-mode input,
+.app-container.dark-mode select,
+.app-container.dark-mode button {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #777;
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .app-content {

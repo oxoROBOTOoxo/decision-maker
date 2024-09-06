@@ -1,12 +1,13 @@
 import React from 'react';
-import ThemeToggle from './ThemeToggle';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ toggleDarkMode, isDarkMode }) => {
   return (
     <header className="app-header">
       <h1>Decision Maker App</h1>
-      <ThemeToggle />
+      <button onClick={toggleDarkMode}>
+        {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+      </button>
     </header>
   );
 };

@@ -11,8 +11,11 @@ const SelectionHistory = ({ history }) => {
         history.map((item, index) => (
           <div key={index} className="history-item">
             <div className="timestamp">{item.timestamp}</div>
+            <div className="method">{item.method}</div>
             <div className="selections">
-              {item.selections.join(', ')}
+              {item.selections.map((selection, i) => (
+                <div key={i}>{selection}</div>
+              ))}
             </div>
           </div>
         ))
