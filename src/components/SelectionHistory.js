@@ -32,3 +32,5 @@ const SelectionHistory = ({ history, isLoading }) => {
     </div>
   );
 };
+
+export default SelectionHistory;

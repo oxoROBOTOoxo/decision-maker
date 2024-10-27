@@ -9,7 +9,57 @@ const DecisionMethods = ({ options, setHistory, isLoading }) => {
   const [votes, setVotes] = useState({});
   const [result, setResult] = useState(null);
 
-  // ... (keep existing helper functions)
+  // Random Selection Method
+  const randomSelection = () => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    return options[randomIndex];
+  };
+
+  // Weighted Random Selection Method
+  const weightedRandomSelection = () => {
+    const totalWeight = Object.values(weights).reduce((sum, weight) => sum + parseFloat(weight || 0), 0);
+    if (totalWeight === 0) return randomSelection();
+
+    let random = Math.random() * totalWeight;
+    for (const option of options) {
+      const weight = parseFloat(weights[option] || 0);
+      if (random <= weight) return option;
+      random -= weight;
+    }
+    return options[options.length - 1];
+  };
+
+  // Elimination Rounds Selection Method
+  const eliminationRoundsSelection = () => {
+    let remainingOptions = [...options];
+    for (let i = 0; i < eliminationRounds && remainingOptions.length > 1; i++) {
+      const removeIndex = Math.floor(Math.random() * remainingOptions.length);
+      remainingOptions.splice(removeIndex, 1);
+    }
+    return remainingOptions[0];
+  };
+
+  // Voting Selection Method
+  const votingSelection = () => {
+    const totalVotes = Object.values(votes).reduce((sum, vote) => sum + parseInt(vote || 0), 0);
+    if (totalVotes === 0) return randomSelection();
+
+    let random = Math.random() * totalVotes;
+    for (const option of options) {
+      const vote = parseInt(votes[option] || 0);
+      if (random <= vote) return option;
+      random -= vote;
+    }
+    return options[options.length - 1];
+  };
+
+  // Handle weight change for weighted selection
+  const handleWeightChange = (option, value) => {
+    setWeights(prev => ({
+      ...prev,
+      [option]: value
+    }));
+  };
 
   const makeDecision = async () => {
     if (isLoading) return;
@@ -78,8 +128,6 @@ const DecisionMethods = ({ options, setHistory, isLoading }) => {
         </div>
       )}
 
-      {/* ... (other method-specific inputs) */}
-
       <button 
         onClick={makeDecision} 
         className={`make-decision-btn ${isLoading ? 'loading' : ''}`}
@@ -97,3 +145,5 @@ const DecisionMethods = ({ options, setHistory, isLoading }) => {
     </div>
   );
 };
+
+export default DecisionMethods;

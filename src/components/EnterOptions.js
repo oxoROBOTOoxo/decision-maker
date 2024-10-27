@@ -72,3 +72,5 @@ const EnterOptions = ({ options, setOptions, isDarkMode, isLoading }) => {
     </div>
   );
 };
+
+export default EnterOptions;
