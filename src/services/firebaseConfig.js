@@ -5,13 +5,13 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCqy3jn4aN59lBswP3UBKBB6nOFQRXJiI4",
-  authDomain: "randomapp-522bb.firebaseapp.com",
-  projectId: "randomapp-522bb",
-  storageBucket: "randomapp-522bb.appspot.com",
-  messagingSenderId: "598723642960",
-  appId: "1:598723642960:web:91a5f62301b7985f6d7355",
-  measurementId: "G-H3N43ZJZTN"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
 // Initialize Firebase
@@ -20,5 +20,4 @@ const analytics = getAnalytics(app);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 
-// Add this to test initialization
 console.log('Firebase initialized with config:', firebaseConfig);
