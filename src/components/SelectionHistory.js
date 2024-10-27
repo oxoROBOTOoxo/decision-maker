@@ -1,7 +1,16 @@
 import React from 'react';
 import './SelectionHistory.css';
 
-const SelectionHistory = ({ history }) => {
+const SelectionHistory = ({ history, isLoading }) => {
+  if (isLoading) {
+    return (
+      <div className="history-container">
+        <h2>Selection History</h2>
+        <div className="loading-message">Loading history...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="history-container">
       <h2>Selection History</h2>
@@ -9,7 +18,7 @@ const SelectionHistory = ({ history }) => {
         <p>No history available.</p>
       ) : (
         history.map((item, index) => (
-          <div key={index} className="history-item">
+          <div key={item.id || index} className="history-item">
             <div className="timestamp">{item.timestamp}</div>
             <div className="method">{item.method}</div>
             <div className="selections">
@@ -23,5 +32,3 @@ const SelectionHistory = ({ history }) => {
     </div>
   );
 };
-
-export default SelectionHistory;

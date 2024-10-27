@@ -48,3 +48,22 @@
     color: #bbb;
   }
   
+  .loading-message {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+  }
+  
+  .dark-mode .loading-message {
+    color: #fff;
+  }
+
+  input.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: #f5f5f5;
+  }
+  
+  .dark-mode input.disabled {
+    background-color: #444;
+  }

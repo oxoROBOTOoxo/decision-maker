@@ -104,3 +104,18 @@
   .dark-mode .result {
     background-color: #444;
   }
+
+  .decision-methods button.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .decision-methods button.loading {
+    background-color: #ccc;
+    cursor: wait;
+  }
+  
+  .make-decision-btn.loading {
+    opacity: 0.7;
+    cursor: wait;
+  }

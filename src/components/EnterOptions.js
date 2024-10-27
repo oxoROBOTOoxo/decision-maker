@@ -3,7 +3,7 @@ import OptionItem from './OptionItem';
 import './EnterOptions.css';
 import { useNavigate } from 'react-router-dom';
 
-const EnterOptions = ({ options, setOptions, isDarkMode }) => {
+const EnterOptions = ({ options, setOptions, isDarkMode, isLoading }) => {
   const [numOptions, setNumOptions] = useState(1);
   const navigate = useNavigate();
 
@@ -19,18 +19,20 @@ const EnterOptions = ({ options, setOptions, isDarkMode }) => {
     setOptions(newOptions);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isLoading) return;
+
     const filledOptions = options.filter(option => typeof option === 'string' && option.trim() !== '');
     if (filledOptions.length === 0) {
       alert('Please enter at least one valid option.');
       return;
     }
-    setOptions(filledOptions);
-    alert('Options entered successfully!');
+    
+    await setOptions(filledOptions);
+    alert('Options saved successfully!');
     navigate('/');
   };
-  
 
   return (
     <div className="container">
@@ -45,6 +47,7 @@ const EnterOptions = ({ options, setOptions, isDarkMode }) => {
               onChange={handleNumOptionsChange}
               min="1"
               className={isDarkMode ? 'dark-input' : ''}
+              disabled={isLoading}
             />
           </div>
           {options.map((option, index) => (
@@ -54,13 +57,18 @@ const EnterOptions = ({ options, setOptions, isDarkMode }) => {
               value={option}
               onChange={(value) => handleOptionChange(index, value)}
               isDarkMode={isDarkMode}
+              disabled={isLoading}
             />
           ))}
-          <button type="submit">Submit Options</button>
+          <button 
+            type="submit" 
+            disabled={isLoading}
+            className={isLoading ? 'loading' : ''}
+          >
+            {isLoading ? 'Saving...' : 'Submit Options'}
+          </button>
         </form>
       </div>
     </div>
   );
 };
-
-export default EnterOptions;
