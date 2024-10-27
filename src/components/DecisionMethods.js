@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './DecisionMethods.css';
-import { saveHistory } from '../services/firestoreService';
 
 const DecisionMethods = ({ options, setHistory, isLoading }) => {
   const [selectedMethod, setSelectedMethod] = useState('random');

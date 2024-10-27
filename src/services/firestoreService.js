@@ -5,10 +5,7 @@ import {
   getDocs, 
   query, 
   orderBy, 
-  where,
-  doc,
-  updateDoc,
-  deleteDoc
+  where
 } from 'firebase/firestore';
 
 // Test function to verify Firestore connection
