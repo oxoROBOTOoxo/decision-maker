@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public access for development
+    match /optionSets/{document} {
+      allow read, write: if true;
+    }
+    
+    match /history/{document} {
+      allow read, write: if true;
+    }
+  }
+}

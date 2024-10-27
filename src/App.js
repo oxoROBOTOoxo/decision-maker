@@ -4,7 +4,8 @@ import Header from './components/Header';
 import EnterOptions from './components/EnterOptions';
 import DecisionMethods from './components/DecisionMethods';
 import SelectionHistory from './components/SelectionHistory';
-import { getOptions, getHistory, saveOptions, saveHistory } from './firestoreService';
+import { getOptions, getHistory, saveOptions, saveHistory } from './services/firestoreService';
+import { auth } from './services/firebaseConfig';
 import './App.css';
 
 function App() {
