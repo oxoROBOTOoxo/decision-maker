@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import EnterOptions from './components/EnterOptions';
 import DecisionMethods from './components/DecisionMethods';
 import SelectionHistory from './components/SelectionHistory';
 import { getOptions, getHistory, saveOptions, saveHistory } from './services/firestoreService';
-import { auth } from './services/firebaseConfig';
 import './App.css';
 
 function App() {
@@ -104,25 +103,31 @@ function App() {
         )}
 
         <div className="app-content">
-          <div className="left-side">
-            <EnterOptions 
-              options={options} 
-              setOptions={handleOptionsUpdate} 
-              isDarkMode={isDarkMode}
-              isLoading={isLoading}
-            />
-            <SelectionHistory 
-              history={history}
-              isLoading={isLoading}
-            />
-          </div>
-          <div className="right-side">
-            <DecisionMethods 
-              options={options} 
-              setHistory={handleHistoryUpdate}
-              isLoading={isLoading}
-            />
-          </div>
+          <Routes>
+            <Route path="/" element={
+              <div className="app-layout">
+                <div className="left-side">
+                  <EnterOptions 
+                    options={options} 
+                    setOptions={handleOptionsUpdate} 
+                    isDarkMode={isDarkMode}
+                    isLoading={isLoading}
+                  />
+                  <SelectionHistory 
+                    history={history}
+                    isLoading={isLoading}
+                  />
+                </div>
+                <div className="right-side">
+                  <DecisionMethods 
+                    options={options} 
+                    setHistory={handleHistoryUpdate}
+                    isLoading={isLoading}
+                  />
+                </div>
+              </div>
+            } />
+          </Routes>
         </div>
       </div>
     </Router>
